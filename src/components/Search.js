@@ -1,9 +1,11 @@
 import React from "react"
 
-function Search() {
+function Search({searchTerm, onSearchChange}) {
     return (
         <div>
-            <input type="text" onChange={() => console.log("Searching...")} placeholder="Search..."/>
+            <input type="text" 
+            onChange={(e) => onSearchChange(e.target.value)} 
+            placeholder="Search..."/>
         </div>
     );
 }
